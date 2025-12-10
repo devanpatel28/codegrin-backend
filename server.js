@@ -6,6 +6,8 @@ const path = require("path")
 
 
 const adminAuthRoutes = require('./routes/adminAuthRoutes');
+const portfolioRoutes = require('./routes/portfolioRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
 
 const app = express();
 
@@ -22,6 +24,8 @@ app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 
 
 app.use('/api/admin', adminAuthRoutes);
+app.use("/api/categories", categoryRoutes);
+app.use("/api/portfolios", portfolioRoutes);
 
 async function testConnection() {
     try {
