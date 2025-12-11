@@ -5,12 +5,15 @@ const {
   getAllCategories,
   addCategory,
   updateCategory,
-  deleteCategory
+  deleteCategory,
+  getCategoryWithTotal
 } = require("../controller/categoryController.js");
 
 router.get("/", getAllCategories);
+router.get("/total", getCategoryWithTotal);
 router.post("/", authenticationToken, addCategory);
 router.put("/:id", authenticationToken, updateCategory);
 router.delete("/:id", authenticationToken, deleteCategory);
+
 
 module.exports = router;

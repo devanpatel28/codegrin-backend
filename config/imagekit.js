@@ -8,10 +8,6 @@ const imagekit = new ImageKit({
 
 
 const ImagekitFolder = {
-    driver_documents: '/echarter/driver-documents/',
-    vehicle_documents: '/echarter/vehicle-documents/',
-    trip_documents: '/echarter/trip-documents/',
-    driver_profile: '/echarter/driver-profile/',
-    vehicle_images: '/echarter/vehicle-images/'
+    portfolio_images: '/codegrin/portfolio_images/',
 }
 module.exports = {imagekit,ImagekitFolder};
